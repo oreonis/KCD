@@ -1,8 +1,324 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__content {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 465px;
+    color: #ffff;
+    padding: 156px 0 254px;
+  }
+
+  &__content-container {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 107px;
+    @extend %Oswald-Regular-400;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    line-height: 54px;
+    @extend %Oswald-Regular-400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+
+  &__images {
+    position: absolute;
+    right: 0;
+    bottom: -330px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    padding: 0 3px 5px 3px;
+    transition: all 0.3s;
+    @extend %Oswald-Regular-400;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+.services{
+  padding-top: 200px;
+  &__inner{
+    display: flex;
+    margin-bottom: 100px;
+  }
+  &__content{
+    width: 505px;
+    margin-right: 96px;
+  }
+
+  &__content-title{
+    color: $accent;
+    font-size: 18px;
+    line-height: 27px;
+    @extend %Oswald-Light-300;
+    margin-bottom: 12px;
+  }
+  &__content-textbox{
+    margin-bottom: 57px;
+  }
+  &__content-text{
+    margin-bottom: 50px;
+  }
+  &__list{
+    list-style: none;
+    counter-reset: my-counter;
+  }
+  &__item{
+    counter-increment: my-counter;
+    border: 2px solid #c4c4c4;
+    margin-bottom: 12px;
+    width: 450px;
+    padding: 10px 15px 10px 113px;
+    position: relative;
+    transition: all .5s;
+  }
+  &__item::before{
+    content: '0' counter(my-counter);
+    position: absolute;
+    left: 20px;
+    font-size: 36px;
+    line-height: 54px;
+    @extend %Oswald-Regular-400;
+    color: #C4C4C4;
+    transform: rotate(270deg);
+    transition: all .5s;
+  }
+  &__item:hover{
+    border: 2px solid $accent;
+    width: 500px;
+  }
+  &__item:hover .services__item-title{
+    color: $accent;
+  }
+  &__item:hover::before{
+    color: $accent;
+  }
+  &__item-title{
+    font-size: 24px;
+    @extend%Oswald-Light-300;
+  }
+}
+.benefits{
+  margin-bottom: 100px;
+  &__inner{
+    display: flex;
+  }
+  &__images{
+    margin-right: 95px;
+  }
+  &__content{
+    width: 100%;
+    color: #ffff;
+  }
+  &__title{
+    margin-left: 185px;
+    color: #000000;
+  }
+  &__list{
+    background-color: #000000;
+    padding: 25px 0 25px 185px;
+  }
+  &__item{
+    width: 320px;
+    margin-bottom: 20px;
+  }
+  &__item-num{
+    @extend %Oswald-Regular-400;
+    font-size: 36px;
+    line-height: 54px;
+  }
+  &__item-title{
+    @extend %Oswald-Light-300;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  &__item-text{
+    color: #C4C4C4;
+  }
+}
+.carousel{
+  margin-bottom: 100px;
+  &__inner{
+    margin: 0 -7px;
+  }
+  &__item{
+    
+  }
+  &__item-box{
+    border: 1px solid #C4C4C4;
+    padding: 6px 6px 16px 6px;
+    margin: 0 7px;
+    text-align: center;
+  }
+  &__item-img{
+    max-width: 100%;
+    margin-bottom: 23px;
+  }
+  &__item-title{
+    
+  }
+  &__item-icons{
+    display: flex;
+    justify-content: center;
+  }
+  &__icon + .carousel__icon{
+    margin-left: 15px;
+  }
+  &__icon{
+    margin-top: 10px;
+  }
+  &__icon-img{
+    display: block;
+    margin: 0 auto;
+  }
+  &__item-price{
+    color: $accent;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .slick-dots{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .slick-dots button{
+    font-size: 0;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #C4C4C4;
+    width: 50px;
+    height: 1px;
+  }
+  .slick-active button{
+    background-color: $accent;
+    height: 3px;
+  }
+  &__button{
+    display: block;
+    width: 246px;
+    margin: 80px auto 130px;
+    text-align: center;
+  }
+  .button--decor::after{
+    margin-left: 170px;
+  }
+}
+.contacts {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__item-title {
+    color: $accent;
+  }
+  &__form {
+    background-color: #000000;
+    padding: 50px 75px 57px;
+    color: #ffff;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 16px;
+    margin-left: 48px;
+    text-align-last: left;
+  }
+  &__title::after {
+    background-color: #ffff;
+  }
+  &__input {
+    border-radius: 30px;
+    background-color: transparent;
+    width: 450px;
+    height: 65px;
+    color: #C4C4C4;
+    border: 1px solid #ffff;
+    margin-bottom: 12px;
+    display: block;
+    font-size: 24px;
+    padding: 0 15px;
+    text-align: center;
+  }
+  &__input::placeholder {
+    text-align: center;
+    @extend %Oswald-Regular-400;
+    color: #C4C4C4;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+  }
+  &__button {
+    border: none;
+    color: $accent;
+    margin-top: 78px;
+    cursor: pointer;
+  }
+}
+.footer {
+  background-color: #000000;
+  padding: 10px 0;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy {
+    color: #ffff;
+  }
+}
 
 
 
