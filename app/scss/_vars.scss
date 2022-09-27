@@ -1,8 +1,10 @@
 $accent: #C92424;
-$default: #8d8d8d;
-$title: #29282d;
+$default: #29282d;
 
-
+%Oswald-Light-300 {
+  font-family: Oswald-Light, sans-serif;
+  font-weight: 300;
+}
 %Oswald-Regular-400 {
   font-family: Oswald-Regular, sans-serif;
   font-weight: 400;
@@ -11,7 +13,6 @@ $title: #29282d;
   font-family: Oswald-Medium, sans-serif;
   font-weight: 500;
 }
-
 %Oswald-Bold-700{
   font-family: Oswald-Bold, sans-serif;
   font-weight: 700;

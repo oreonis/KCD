@@ -1,11 +1,92 @@
+html,
+body {
+  height: 100%;
+}
 body{
   font-size: 18px;
   line-height: 26px;
   color: $default;
-  @extend %Oswald-Medium-500;
+  @extend %Oswald-Regular-400;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex-grow: 1;
 }
 .container{
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 0px 10px;
 }
+
+a{
+  font-size: 18px;
+  line-height: 26px;
+  color: $default;
+  @extend %Oswald-Medium-500;
+} 
+.title{
+  @extend %Oswald-Regular-400;
+  font-size: 36px;
+  line-height: 54px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+}
+.title::after{
+  content: '';
+  width: 80px;
+  height: 3px;
+  background-color: #000000;
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+}
+.button{
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 14px 54px 15px;
+  border: 1px solid $accent;
+  color: $accent;
+  transition: all .5s;
+}
+.button:hover{
+  background-color: $accent;
+  color: #ffff;
+
+}
+.button--decor{
+  margin-top: -7px;
+  position: relative;
+}
+.button--decor::after{
+   content: 'ЖМИ';
+   color: $accent;
+   margin-left: 130px;
+   top: 13px;
+   position: absolute;
+}
+.button--decor:hover::after{
+  display: none;
+}
+.button--decor::before{
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: $accent;
+  right: -65px;
+  top: 24px;
+  position: absolute;
+}
+.button--decor:hover::before {
+  display: none;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  &__link + .social__link{
+    margin-left: 16px;
+  }
+}
+
