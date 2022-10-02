@@ -1,14 +1,14 @@
 $(function () {
 
   $('.catalog-content__filter-btn').on('click', function () {
-    $('.catalog-content__filter-btn').removeClass('.catalog-content__filter-btn--active');
-    $(this).addClass('.catalog-content__filter-btn--active'); 
+    $('.catalog-content__filter-btn').removeClass('catalog-content__filter-btn--active');
+    $(this).addClass('catalog-content__filter-btn--active'); 
   });
-  $('button-list').on('click', function () {
-    $('carusel__item').addClass('carusel__item--list');
+  $('.button-list').on('click', function () {
+    $('.catalog-content__item').addClass('catalog-content__item--list');
   });
-  $('button-grid').on('click', function () {
-    $('carusel__item').removeClass('carusel__item--list');
+  $('.button-grid').on('click', function () {
+    $('.catalog-content__item').removeClass('catalog-content__item--list');
   });
 
   $('.select-style').styler();
