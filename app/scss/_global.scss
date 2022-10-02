@@ -18,6 +18,60 @@ body{
   margin: 0 auto;
   padding: 0px 10px;
 }
+.dreadcrumbs {
+  font-size: 16px;
+  line-height: 24px;
+  @extend %Oswald-Regular-400;
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+  color: #ffff;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icon/home-icon.svg');
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 4px;
+  }
+  &__list{
+    padding: 0;
+    display: flex;
+    color: #ffff;
+  }
+  &__item{
+    padding-right: 40px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../images/icon/angle-right.svg');
+        width: 5px;
+        height: 8px;
+        right: 15px;
+        top: 10px;
+    } 
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: #ffff;
+    font-size: 16px;
+    line-height: 24px;
+    @extend %Oswald-Regular-400;
+  }
+  span{
+    font-size: 16px;
+    line-height: 24px;
+    @extend %Oswald-Regular-400;
+  }
+}
 
 a{
   font-size: 18px;
@@ -48,13 +102,13 @@ a{
   text-transform: uppercase;
   padding: 14px 54px 15px;
   border: 1px solid $accent;
+  border-radius: 0px;
   color: $accent;
   transition: all .5s;
 }
 .button:hover{
   background-color: $accent;
   color: #ffff;
-
 }
 .button--decor{
   margin-top: -7px;
@@ -89,4 +143,3 @@ a{
     margin-left: 16px;
   }
 }
-
