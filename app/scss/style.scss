@@ -605,7 +605,7 @@ section catalog
       min-width: 100%;
       display: flex;
       padding-bottom: 6px;
-     text-align: left;
+      text-align: left;
      .catalog-content__item-inner{
       padding: 0 30px 0 40px;
      }
@@ -626,6 +626,14 @@ section catalog
      }
     }
   }
+  &__item-box{
+    min-width: 250px;
+    .catalog-content__item-img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
   &__item-icons{
     display: flex;
     justify-content: center;
@@ -711,5 +719,50 @@ section catalog
   border-width: 8px 4px 0 4px;
   border-color: #D9D9D9 transparent transparent transparent;
 }
+
+
+/* start shop.html */
+
+.shop-content{
+  &__item{
+    padding: 6px 6px 16px 6px;
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 36px;
+    @extend %Oswald-Light-300;
+    color: #000000;
+    border: 1px solid #D9D9D9;
+    margin-bottom: 40px;
+  }
+  &__item-subtitle{
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    @extend %Oswald-Light-300;
+  }
+  &__item-img{
+    display: block;
+    margin: 0 auto 20px;
+  }
+  &__item-title{
+    @extend %Oswald-Light-300;
+    margin-bottom: 20px;
+  }
+  &__item-prices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  &__item-price{
+    color: $accent;
+    font-size: 22px;
+  }
+  &__item-btn {
+     padding: 10px 25px 11px;
+  }
+}
+
 
 @import 'media';
