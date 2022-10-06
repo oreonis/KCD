@@ -244,9 +244,9 @@
     margin-bottom: 10px;
   }
   &__item-title{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
-    @extend %Oswald-Light-300
+    @extend %Oswald-Regular-400;
   }
   &__item-icons {
     display: flex;
@@ -257,6 +257,7 @@
   }
   &__icon {
     margin-top: 10px;
+    @extend %Oswald-Light-300;
   }
   &__icon-img {
     display: block;
@@ -763,6 +764,105 @@ section catalog
      padding: 10px 25px 11px;
   }
 }
+
+/* And shop.html */
+
+
+/* start product.html */
+
+
+.product{
+  padding: 120px 0 60px;
+    &__review-title {
+        @extend %Oswald-Medium-500;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    
+      &__reviaw-text {
+        margin-bottom: 20px;
+        @extend %Oswald-Light-300;
+      }
+}
+.product-item{
+  margin-bottom: 40px;
+  &__inner{
+    display: flex;
+  }
+  &__slide{
+    width: 600px;
+    margin-right: 70px;
+  }
+  &__content{
+    width: 500px;
+  }
+  &__title{
+    @extend %Oswald-Regular-400;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  &__price{
+    color: $accent;
+    font-size: 22px;
+    margin-bottom: 30px;
+    span{
+      margin-left: 20px;
+      font-size: 18px;
+    }
+  }
+  &__info-title{
+    @extend %Oswald-Regular-400;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+.product-info{
+  margin-bottom: 30px;
+  &__list{
+    padding: 0;
+  }
+  &__item{
+    display: flex;
+  }
+  &__title{
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    img{
+      width: 16px;
+      height: 18px;
+      margin-right: 10px;
+    }
+  }
+}
+  .product-slide{
+    &__thumb{
+      height: 130px;
+      margin-top: 30px;
+      margin: 20px -5px 0;
+    }
+    &__thumb-item{
+      width: 140px;
+      height: 130px;
+      /* margin-left: 20px; */
+      margin-left: 10px;
+      cursor: pointer;
+      img{
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+      }
+    }
+    &__big{
+      width: 600px;
+      img{
+        width: 600px;
+        height: 400px;
+        object-fit: contain;
+      }
+    }
+  }
 
 
 @import 'media';
